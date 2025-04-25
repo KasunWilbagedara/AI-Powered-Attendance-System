@@ -9,16 +9,16 @@ folderPath = 'Images'
 pathList = os.listdir(folderPath)
 print(pathList)
 imgList = []
-studentsIds = []
+studentIds = []
 
 for path in pathList:
     imgList.append(cv2.imread(os.path.join(folderPath,path)))
 
-    studentsIds.append(os.path.splitext(path)[0])
+    studentIds.append(os.path.splitext(path)[0])
    # print(path)
     #print(os.path.splitext(path)[0])
 
-    print(studentsIds)
+    print(studentIds)
 
 def findEncodings(imagesList):
     encodeList = []
@@ -31,7 +31,7 @@ def findEncodings(imagesList):
 
 print("Encoding Started....")
 encodeListKnown = findEncodings(imgList)
-encodeListKnownWithIds = [encodeListKnown, studentsIds]
+encodeListKnownWithIds = [encodeListKnown, studentIds]
 
 print("Encoding Complete")
 

@@ -55,8 +55,8 @@ while True:
     imgBackground[44:44+633,808:808+414] = imgModeList[3]
 
     for encoFace, faceLoc in zip(encodeCurFrame,faceCurFrame):
-        matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
-        faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
+        matches = face_recognition.compare_faces(encodeListKnown,encoFace)
+        faceDis = face_recognition.face_distance(encodeListKnown,encoFace)
        # print("matches", matches)
        # print("faceDis",faceDis)
 
